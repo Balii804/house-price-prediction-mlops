@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import numpy as np
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Load the trained model weights and normalization parameters
 theta = np.load('model_weights.npy')
