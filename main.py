@@ -54,7 +54,7 @@ def load_normalization_params(mean_filename, std_filename):
     std = np.load(std_filename)
     return mean, std
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     # Create the dataset
     data, target = create_dataset()
     
