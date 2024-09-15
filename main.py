@@ -41,6 +41,7 @@ def save_model_weights(model, filename):
 def load_model_weights(filename):
     return np.load(filename)
 
+
 if _name_ == "_main_":
     # Create the dataset
     data, target = create_dataset()
@@ -52,6 +53,7 @@ if _name_ == "_main_":
     model = train_model(X, target)
     print(f"Model weights: {model}")
     
+
     # Save the model weights to a file
     save_model_weights(model, 'model_weights.npy')
     
@@ -59,12 +61,17 @@ if _name_ == "_main_":
     model_loaded = load_model_weights('model_weights.npy')
     print(f"Loaded model weights: {model_loaded}")
     
+
     # Predict on new data
     new_data = np.array([
         [1600, 3, 12],
         [2200, 4, 10]
     ])
     X_new = preprocess(new_data)
+
     predictions = predict(model_loaded, X_new)
+
+    predictions = predict(model, X_new)
+
     
     print(f"Predictions: {predictions}")
