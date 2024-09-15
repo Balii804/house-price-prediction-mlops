@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: '3.12.4'
 
     - name: Install distutils
       run: |
@@ -34,5 +34,4 @@ jobs:
 
     - name: Run main.py
       run: |
-        python main.py   
-
+        python main.py

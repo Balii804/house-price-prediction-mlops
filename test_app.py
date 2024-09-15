@@ -24,4 +24,3 @@ def test_predict_endpoint(client):
     data = response.get_json()
     assert 'predicted_price' in data
     assert isinstance(data['predicted_price'], (int, float))
-

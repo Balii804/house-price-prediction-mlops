@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import numpy as np
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 # Load the trained model weights and normalization parameters
 theta = np.load('model_weights.npy')
@@ -34,5 +34,5 @@ def predict():
 def home():
     return "Welcome to the Home Page"
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)
