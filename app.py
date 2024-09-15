@@ -34,5 +34,5 @@ def predict():
 def home():
     return "Welcome to the Home Page"
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True)
