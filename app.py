@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import numpy as np
 
 app = Flask(__name__)
+
 @app.route('/')
 def home():
     return "Welcome to the Home Page"
@@ -16,5 +17,3 @@ def predict():
         return jsonify({'error': 'Invalid input shape'}), 400
     prediction = np.dot(expected_features, features)  # Dummy prediction
     return jsonify({'prediction': prediction})
-if __name__ == "__main__":
-    app.run(debug=True)
