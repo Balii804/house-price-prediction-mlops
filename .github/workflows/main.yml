@@ -9,19 +9,15 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.x'
+        python-version: '3.12'  # Specify the exact Python version you're using
         
-    - name: Install distutils
+    - name: Upgrade pip and setuptools
       run: |
-        sudo apt-get update
-        sudo apt-get install -y python3-distutils
-
-    - name: Upgrade pip
-      run: pip install --upgrade pip
+        python -m pip install --upgrade pip setuptools
 
     - name: Install dependencies
       run: |
